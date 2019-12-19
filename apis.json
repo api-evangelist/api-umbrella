@@ -1,0 +1,49 @@
+{
+    "name": "API Umbrella",
+    "description": "GitHub brings together the world???s largest community of developers to discover, share, and build better software. From open source projects to private team repositories, we???re your all-in-one platform for collaborative development.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11382-api-umbrella.jpg",
+    "tags": [
+        "api tools",
+        "have api",
+        "management"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "API Umbrella",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11382-api-umbrella.jpg",
+            "humanURL": "http:\/\/nrel.github.io\/api-umbrella\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-umbrella-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/github"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/NREL"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/github"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/nrel.github.io\/api-umbrella\/"
+        }
+    ]
+}
