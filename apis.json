@@ -5,10 +5,12 @@
     "tags": [
         "api tools",
         "have api",
-        "management"
+        "have swagger",
+        "management",
+        "new"
     ],
-    "created": "2019-12-20",
-    "modified": "2019-12-20",
+    "created": "2019-12-25",
+    "modified": "2019-12-25",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -16,27 +18,23 @@
             "name": "API Umbrella",
             "description": null,
             "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11382-api-umbrella.jpg",
-            "humanURL": "http:\/\/nrel.github.io\/api-umbrella\/",
+            "humanURL": "https:\/\/apiumbrella.io\/",
             "baseURL": "",
             "tags": [],
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/api-umbrella-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/api-umbrella-admin-api-openapi.json"
                 },
                 {
                     "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/api-umbrella-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/api-umbrella\/master\/api-umbrella-admin-api-postman-collection.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
-        {
-            "type": "APIs.json",
-            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
-        },
         {
             "type": "Crunchbase",
             "url": "https:\/\/crunchbase.com\/organization\/github"
@@ -46,12 +44,12 @@
             "url": "https:\/\/github.com\/NREL"
         },
         {
-            "type": "Twitter",
-            "url": "https:\/\/twitter.com\/github"
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/11382-2019-12-25-13-29-15.json"
         },
         {
             "type": "Website",
-            "url": "http:\/\/nrel.github.io\/api-umbrella\/"
+            "url": "https:\/\/apiumbrella.io\/"
         }
     ]
 }
