@@ -1,0 +1,1385 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "API Umbrella",
+        "description": "The admin API is accessible via `\/api-umbrella\/v1`. In order to access this API, you must pass:\n\n- Your API key via one of the [supported methods](http:\/\/nrel.github.io\/api-umbrella\/docs\/api-keys\/).\n- **AND** an admin token via the `X-Admin-Auth-Token` header.\n\nTo find the admin auth token for your admin account, login the web admin tool, and choose \"My Account\" under the top right gear menu. On that page, you should see your \"Admin API Token\" listed. Use this in conjunction with your normal API key to make requests to the admin APIs:\n\n```http\nX-Api-Key: YOUR_API_KEY_HERE\nX-Admin-Auth-Token: YOUR_ADMIN_TOKEN_HERE\n```",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/apiumbrella.io\/\/"
+    ],
+    "paths": {
+        "\/api-umbrella\/v1\/admin_groups": {
+            "get": {
+                "summary": "Get a list of all admin groups.",
+                "description": "Get a listing of all admin group records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new admin group.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/admin_groups\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the admin group",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the admin group",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the admin group",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/admin_permissions": {
+            "get": {
+                "summary": "Get a list of all admin permissions.",
+                "description": "Get a listing of all admin permission records.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/admins": {
+            "get": {
+                "summary": "Get a list of all admin accounts.",
+                "description": "Get a listing of all admin account records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new admin account.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/admins\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the admin account",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the admin account",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the admin account",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/analytics\/drilldown": {
+            "get": {
+                "summary": "Get a summary of pending configuration changes.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "prefix",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "start_at",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "end_at",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "interval",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "A string of JSON in the format [jQuery QueryBuilder](http:\/\/mistic100.github.io\/jQuery-QueryBuilder\/) generates for fields to filter."
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "A raw elasticsearch query string."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/api_scopes": {
+            "get": {
+                "summary": "Get a list of all API scopes.",
+                "description": "Get a listing of all API scope records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new API scope.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/api_scopes\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the API scope",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the API scope",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the API scope",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/apis": {
+            "get": {
+                "summary": "Get a list of all API backends.",
+                "description": "Get a listing of all API backend records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new API backend.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/apis\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the API backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the API backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the API backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/config\/pending_changes": {
+            "get": {
+                "summary": "Get a summary of pending configuration changes.",
+                "description": "Return a summary of configuration changes for API backends and website backends that have not yet been published.\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/config\/publish": {
+            "post": {
+                "summary": "Publish API backend or website backend changes.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/contact": {
+            "post": {
+                "summary": "Send a support e-mail to the website administrator.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/user_roles": {
+            "get": {
+                "summary": "Get a list of all user roles available.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/users": {
+            "get": {
+                "summary": "Get a list of all API users\/API keys.",
+                "description": "Get a listing of all API user\/API key records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new API user\/API key.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/users\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the API user\/API key",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the API user\/API key",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the API user\/API key",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/website_backends": {
+            "get": {
+                "summary": "Get a list of all website backends.",
+                "description": "Get a listing of all website backend records the currently authenticated admin user has permissions to.\n\nThis API's query parameters and responses are intended to be compatible with the [DataTables server-side processing API](https:\/\/datatables.net\/manual\/server-side).\n",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new website backend.",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": "Successfully created record"
+                    }
+                }
+            }
+        },
+        "\/api-umbrella\/v1\/website_backends\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get the website backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update the website backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete the website backend",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Successfully updated record"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AdminCreator": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "E-mail address of the admin that created the record",
+                        "type": "string"
+                    }
+                }
+            },
+            "AdminUpdater": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "E-mail address of the admin that created the record",
+                        "type": "string"
+                    }
+                }
+            },
+            "AdminGroup": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "permission_ids": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "api_scope_ids": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "permission_ids": {
+                "type": "array"
+            },
+            "api_scope_ids": {
+                "type": "array"
+            },
+            "created_at": {
+                "type": "object"
+            },
+            "updated_at": {
+                "type": "object"
+            },
+            "Admin": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "E-mail address of the admin that created the record",
+                        "type": "string"
+                    },
+                    "group_ids": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "notes": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "group_ids": {
+                "type": "array"
+            },
+            "ApiSettingsHeader": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "key": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ApiRewrite": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "matcher_type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "http_method": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "frontend_matcher": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "backend_replacement": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ApiSettingsRateLimit": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "accuracy": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit_by": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "distributed": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "response_headers": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "ApiSettings": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "append_query_string": {
+                        "description": "Append query string parameters",
+                        "type": "string"
+                    },
+                    "headers": {
+                        "description": "Set request headers",
+                        "type": "array"
+                    },
+                    "headers_string": {
+                        "description": "Set the `headers` via a new-line separated list",
+                        "type": "string"
+                    },
+                    "default_response_headers": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "default_response_headers_string": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "override_response_headers": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "override_response_headers_string": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "http_basic_auth": {
+                        "description": "HTTP basic authentication",
+                        "type": "string"
+                    },
+                    "require_https": {
+                        "description": "HTTPS requirements",
+                        "type": "string"
+                    },
+                    "require_https_transition_start_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "disable_api_key": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "api_key_verification_level": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "api_key_verification_transition_start_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "required_roles": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "required_roles_override": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "allowed_ips": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "allowed_referers": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "rate_limit_mode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rate_limits": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "anonymous_rate_limit_behavior": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "authenticated_rate_limit_behavior": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pass_api_key_header": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pass_api_key_query_param": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "error_templates": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "error_data": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "error_data_yaml_strings": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "headers": {
+                "type": "array"
+            },
+            "default_response_headers": {
+                "type": "array"
+            },
+            "override_response_headers": {
+                "type": "array"
+            },
+            "required_roles": {
+                "type": "array"
+            },
+            "allowed_ips": {
+                "type": "array"
+            },
+            "allowed_referers": {
+                "type": "array"
+            },
+            "rate_limits": {
+                "type": "array"
+            },
+            "error_templates": {
+                "type": "object"
+            },
+            "error_data": {
+                "type": "object"
+            },
+            "error_data_yaml_strings": {
+                "type": "object"
+            },
+            "ApiSubSettings": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "http_method": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "regex": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ApiSettings": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "settings": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "ApiServer": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "port": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ApiUrlMatch": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "frontend_prefix": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "backend_prefix": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Api": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "sort_order": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "backend_protocol": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "frontend_host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "backend_host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "servers": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "url_matches": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "balance_algorithm": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ApiSettings": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "settings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "sub_settings": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "rewrites": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "servers": {
+                "type": "array"
+            },
+            "url_matches": {
+                "type": "array"
+            },
+            "sub_settings": {
+                "type": "array"
+            },
+            "rewrites": {
+                "type": "array"
+            },
+            "ApiScope": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "path_prefix": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "ConfigDiff": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "active_yaml": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pending": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "pending_yaml": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "active": {
+                "type": "object"
+            },
+            "pending": {
+                "type": "object"
+            },
+            "ArrayOfConfigDiffs": {
+                "type": "array"
+            },
+            "ConfigDiffGroup": {
+                "type": "object",
+                "properties": {
+                    "new": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "deleted": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "identical": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "new": {
+                "type": "object"
+            },
+            "modified": {
+                "type": "object"
+            },
+            "deleted": {
+                "type": "object"
+            },
+            "identical": {
+                "type": "object"
+            },
+            "ConfigPublish": {
+                "type": "object"
+            },
+            "ConfigVersion": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "verison": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "config": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "config": {
+                "type": "object"
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "website": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "use_description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "registration_source": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "throttle_by_ip": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "roles": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "api_key": {
+                        "description": "The full API key. This is only returned on initial user creation and to the administrator who created the user for 10 minutes after creation.",
+                        "type": "string"
+                    },
+                    "api_key_hides_at": {
+                        "description": "When an administrator creates an API key, the full API key will be returned initially, but it's suggested that the full API key be hidden after this expiration date (10 minutes after creation).",
+                        "type": "string"
+                    },
+                    "api_key_preview": {
+                        "description": "The first 6 characters of the API key. This is intended to allow administrators to identify API keys without exposing the full API keys to admins.",
+                        "type": "string"
+                    },
+                    "email_verified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "registration_ip": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "registration_user_agent": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "registration_referer": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "registration_origin": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "WebsiteBackend": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "frontend_host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "backend_protocol": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "server_host": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "server_port": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminCreator": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "creator": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "AdminUpdater": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updater": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            }
+        }
+    }
+}
